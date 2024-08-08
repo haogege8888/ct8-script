@@ -8,7 +8,7 @@ def send_telegram_message(token, chat_id, message):
     telegram_payload = {
         "chat_id": chat_id,
         "text": message,
-        "reply_markup": '{"inline_keyboard":[[{"text":"问题反馈❓","url":"https://t.me/yxjsjl"}]]}'
+        "reply_markup": '{"inline_keyboard":[[{"text":"问题反馈❓","url":"https://t.me/haogege"}]]}'
     }
 
     response = requests.post(telegram_url, json=telegram_payload)
@@ -35,7 +35,7 @@ except json.JSONDecodeError:
     exit(1)
 
 # 初始化汇总消息
-summary_message = "serv00-vless 恢复操作结果：\n"
+summary_message = "ct8-vless 恢复操作结果：\n"
 
 # 默认恢复命令
 default_restore_command = "cd ~/domains/$USER.ct8.pl/vless && ./check_vless.sh"
